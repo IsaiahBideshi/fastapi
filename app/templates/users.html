@@ -1,0 +1,17 @@
+{% extends "authenticated-base.html" %}
+
+{% block additional_styles %}
+
+{% endblock %}
+
+{% block subpage_content %}
+<div>
+    {% for user in all_users %}
+    <div>
+        Username: {user.username}
+        Email: {user.email}
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
