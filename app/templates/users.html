@@ -5,13 +5,20 @@
 {% endblock %}
 
 {% block subpage_content %}
-<div>
-    {% for user in all_users %}
-    <div>
-        Username: {user.username}
-        Email: {user.email}
-    </div>
-    {% endfor %}
-</div>
+
+<table>
+    <thead class="table table-striped">
+        <th>ID</th>
+        <th>Username</th>
+        <th>Email</th>
+    </thead>
+    <tbody>
+        {% for user in all_users %}
+            <tr>{{user.id}}</tr>
+            <tr>{{user.username}}</tr>
+            <tr>{{user.email}}</tr>
+        {%endfor%}
+    </tbody>
+</table>
 
 {% endblock %}
